@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="load_bg">#FAFAFA</color>
+    <color name="load_text">#A0A0A0</color>
+
+    <color name="hint_bar_bg">#FEF2BA</color>
+    <color name="hint_bar_text">#66614A</color>
+
+    <color name="title_main_color">#FFFFFF</color>
+    <color name="title_sub_color">#DCDCDC</color>
+</resources>

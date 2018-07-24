@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">core-lib</string>
+    <string name="tip_load_fail">加载出错\n点击屏幕重试</string>
+    <string name="tip_loading">拼命加载中…</string>
+    <string name="tip_no_data">这里空空如也</string>
+</resources>

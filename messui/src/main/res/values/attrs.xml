@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleView">
+        <attr name="titleStr" format="string"/>
+        <attr name="titleAppearance" format="reference"/>
+        <attr name="titleGravity" format="enum">
+            <enum name="alwaysCenter" value="0" />
+            <enum name="behindNavigate" value="1" />
+        </attr>
+        <attr name="navigateBtnIcon" format="reference"/>
+        <attr name="navigateBtnStr" format="string"/>
+        <attr name="navigateBtnAppearance" format="reference"/>
+        <attr name="navigateBtnAsUp" format="boolean"/>
+        <attr name="showNavigateBtn" format="boolean"/>
+    </declare-styleable>
+</resources>

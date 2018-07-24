@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_loadfail"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/load_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/loadfailure"
+        android:drawablePadding="@dimen/load_views_pad_drawable"
+        android:gravity="center"
+        android:padding="@dimen/min_load_views_padding"
+        android:text="@string/tip_load_fail"
+        android:textColor="@color/load_text"
+        android:textSize="@dimen/load_views_text"/>
+
+</LinearLayout>

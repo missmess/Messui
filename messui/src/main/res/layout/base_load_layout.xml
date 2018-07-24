@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateFirstView="false"
+    android:inAnimation="@anim/alpha_in"
+    android:outAnimation="@anim/alpha_out">
+
+    <!-- 在代码中设置 -->
+</ViewAnimator>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/hint_bar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/hint_bar_pad_horizontal"
+        android:paddingRight="@dimen/hint_bar_pad_horizontal"
+        android:background="@color/hint_bar_bg"
+        android:layout_height="wrap_content">
+
+        <com.missmess.messui.widget.FocusedTextView
+            android:id="@+id/hint_bar_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/hint_bar_pad_vertical"
+            android:paddingTop="@dimen/hint_bar_pad_vertical"
+            android:text="春节期间停止营业春节期间停止营业春节期间停止营业春节期间停止营业"
+            android:textSize="@dimen/hint_bar_text"
+            android:textColor="@color/hint_bar_text"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/hint_bar_close"
+            android:layout_width="wrap_content"
+            android:src="@drawable/icon_grey_close"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:padding="@dimen/hint_bar_pad_horizontal"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/web_page_indicator"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/webPage_progress_height"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@drawable/webpage_progress_indicator"
+        android:visibility="visible"/>
+
+</FrameLayout>

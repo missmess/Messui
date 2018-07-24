@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/left_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/navigate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_arrow_up"
+            android:drawablePadding="@dimen/navigate_pad_drawable"
+            android:gravity="center"
+            android:paddingLeft="@dimen/navigate_pad_left"
+            android:paddingRight="@dimen/navigate_pad_right"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/title_main_color"
+            android:textSize="@dimen/navigate_text"/>
+
+        <TextView
+            android:id="@+id/additional_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/navigate_additional_btn_margin"
+            android:layout_toRightOf="@+id/iv_back"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:maxLength="3"
+            android:singleLine="true"
+            android:text="关闭"
+            android:textColor="@color/title_sub_color"
+            android:textSize="@dimen/navigate_text"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/load_indicator"
+        android:layout_width="@dimen/title_indicator_size"
+        android:layout_height="@dimen/title_indicator_size"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/title_zone"
+        android:indeterminate="true"
+        android:visibility="visible"/>
+
+    <FrameLayout
+        android:id="@+id/title_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/title_margin"
+        android:layout_marginRight="@dimen/title_margin">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="机密项目"
+            android:textColor="@color/title_main_color"
+            android:textSize="@dimen/title_text_size"/>
+
+        <FrameLayout
+            android:id="@+id/title_custom_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/right_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/right_btn_pad"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</RelativeLayout>
