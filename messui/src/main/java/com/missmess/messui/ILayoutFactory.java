@@ -5,8 +5,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A layout factory used in {@link LayoutHelper} to help to easily create a base layout contains
- * loading-view, load-fail, no-data, title bar, pull to refresh-load layout, etc.
+ * LayoutFactory used to provide all base-layout such as load-views, title views, refresh and
+ * load-more views. etc.
+ * <p>
+ * LayoutFactory will later be built by {@link LayoutHelper}, and connect to {@link IBuilder} by
+ * {@link LayoutDelegate}.
  *
  * @author wl
  * @since 2016/07/01 15:59

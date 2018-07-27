@@ -70,10 +70,8 @@ public class DefaultLayoutDelegate extends LayoutDelegate<DefaultLayoutFactory, 
                 tv.setTitleText(p.titleStr);
             if (p.titleView != null)
                 tv.setCustomTitleView(p.titleView);
-            if (p.titleStrRes != 0)
-                tv.setTitleText(p.titleStrRes);
-            if (p.titleViewRes != 0)
-                tv.setCustomTitleView(p.titleViewRes);
+            if (p.titleColor != null)
+                tv.setTitleTextColor(p.titleColor);
             if (p.titleBehindNavigate)
                 tv.setTitleGravity(TitleView.GRAVITY_BEHIND_NAVIGATE);
             if (p.hideNavigate)

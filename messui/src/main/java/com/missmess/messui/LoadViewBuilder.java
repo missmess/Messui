@@ -13,31 +13,41 @@ public abstract class LoadViewBuilder<S1 extends LoadViewBuilder.Setting> extend
     @SuppressWarnings("unchecked")
     public abstract static class Setting<P extends Param, S2 extends Setting<P, S2>> extends ISetting<P> {
 
+        /**
+         * Retry operation
+         */
         public S2 retry(Runnable op) {
             p.retryOP = op;
             return (S2) this;
         }
 
+        /**
+         * Tips showing on loading
+         */
         public S2 loadingTip(CharSequence loadTip) {
             p.loadTip = loadTip;
             return (S2) this;
         }
 
+        /**
+         * Tips showing on load fail
+         */
         public S2 loadFailTip(CharSequence failTip) {
             p.failTip = failTip;
             return (S2) this;
         }
 
+        /**
+         * Tips showing on no-data
+         */
         public S2 noDataTip(CharSequence noDataTip) {
             p.noDataTip = noDataTip;
             return (S2) this;
         }
 
         /**
-         * 默认load-views的图文提示位置为居中，调用这个方法不再垂直居中，给load-views设置padding
-         * @param paddingTop paddingTop
-         * @param paddingBottom paddingBottom
-         * @return for link call
+         * By default load-views is in center of contentView, call this make this feature disable,
+         * and set padding top, bottom.
          */
         public S2 viewOffset(int paddingTop, int paddingBottom) {
             p.padEdited = true;
@@ -47,9 +57,7 @@ public abstract class LoadViewBuilder<S1 extends LoadViewBuilder.Setting> extend
         }
 
         /**
-         * 设置anchor，将在anchor所在的层级显示load-views。
-         * @param anchor anchor
-         * @return for link call
+         * The anchor view will wrap with load-views
          */
         public S2 anchor(@IdRes int anchor) {
             p.anchor = anchor;

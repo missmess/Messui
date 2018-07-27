@@ -22,6 +22,9 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
     @SuppressWarnings("unchecked")
     public abstract static class Setting<P extends Param, S2 extends Setting<P, S2>> extends ISetting<P> {
 
+        /**
+         * Title with text
+         */
         public S2 title(String title) {
             p.titleStr = title;
             p.titleStrRes = 0;
@@ -30,6 +33,9 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Title with text
+         */
         public S2 title(@StringRes int title) {
             p.titleStr = null;
             p.titleStrRes = title;
@@ -38,6 +44,9 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Title with custom view
+         */
         public S2 customTitle(View titleView) {
             p.titleStr = null;
             p.titleStrRes = 0;
@@ -46,6 +55,9 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Title with custom view
+         */
         public S2 customTitle(@LayoutRes int titleLayoutRes) {
             p.titleStr = null;
             p.titleStrRes = 0;
@@ -54,6 +66,17 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Title text color
+         */
+        public S2 titleColor(@ColorInt int color) {
+            p.titleColor = color;
+            return (S2) this;
+        }
+
+        /**
+         * Title height
+         */
         public S2 height(@Px int height) {
             p.height = height;
             return (S2) this;
@@ -68,11 +91,17 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Hide navigation button
+         */
         public S2 hideNavigate() {
             p.hideNavigate = true;
             return (S2) this;
         }
 
+        /**
+         * Add additional button at right of the navigation button.
+         */
         public S2 additionalBtn(String text, View.OnClickListener click) {
             p.addiBtnText = text;
             p.addiBtnClicker = click;
@@ -88,41 +117,65 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
             return (S2) this;
         }
 
+        /**
+         * Navigation button with icon.
+         */
         public S2 navigateIcon(@DrawableRes int icon) {
             p.navigateIcon = icon;
             return (S2) this;
         }
 
+        /**
+         * Navigation button with text.
+         */
         public S2 navigateText(String text) {
             p.navigateText = text;
             return (S2) this;
         }
 
+        /**
+         * Navigation click event.
+         */
         public S2 navigateClick(Runnable click) {
             p.navigateClicker = click;
             return (S2) this;
         }
 
+        /**
+         * The action button on the right side.
+         */
         public S2 rightView(@DrawableRes int icon, View.OnClickListener click) {
             p.rightViews.add(new RightView(icon, click));
             return (S2) this;
         }
 
+        /**
+         * The action button on the right side.
+         */
         public S2 rightView(String text, View.OnClickListener click) {
             p.rightViews.add(new RightView(text, click));
             return (S2) this;
         }
 
+        /**
+         * The action button on the right side.
+         */
         public S2 rightView(View view) {
             p.rightViews.add(new RightView(view));
             return (S2) this;
         }
 
+        /**
+         * Set title paddings
+         */
         public S2 padding(@Px int paddingLeft, @Px int paddingTop, @Px int paddingRight, @Px int paddingBottom) {
             p.paddings = new int[] {paddingLeft, paddingTop, paddingRight, paddingBottom};
             return (S2) this;
         }
 
+        /**
+         * Set title-bar background color
+         */
         public S2 bgColor(@ColorInt int color) {
             p.bgColor = color;
             return (S2) this;
@@ -135,6 +188,7 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
         public int height = ViewGroup.LayoutParams.WRAP_CONTENT;
         public View titleView;
         public int titleViewRes;
+        public Integer titleColor;
         public boolean titleBehindNavigate;
         public boolean hideNavigate;
         public int navigateIcon;
@@ -149,8 +203,7 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
     }
 
     public static class RightView {
-        public @DrawableRes
-        int icon;
+        public @DrawableRes int icon;
         public String text;
         public View view;
         public View.OnClickListener click;

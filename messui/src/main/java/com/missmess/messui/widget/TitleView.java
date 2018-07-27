@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 import android.support.v4.view.ViewCompat;
 import android.text.TextUtils;
@@ -181,6 +182,10 @@ public class TitleView extends FrameLayout {
         if(viewRes != 0) {
             View.inflate(getContext(), viewRes, title_custom_container);
         }
+    }
+
+    public void setTitleTextColor(@ColorInt int color) {
+        title_text.setTextColor(color);
     }
 
     /**

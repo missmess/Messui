@@ -11,7 +11,7 @@ import com.missmess.messui.builtin.SystemUIBuilderRaw;
 import com.missmess.messui.utils.StatusBarUtils;
 
 /**
- * LayoutDelegate do the whole layout-build jobs, and apply the builder params to base layout,
+ * LayoutDelegate do the whole layout-build jobs, and apply the builder params to {@link ILayoutFactory},
  * it connect LayoutFactory and layout builders.
  *
  * @author wl

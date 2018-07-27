@@ -3,7 +3,9 @@ package com.missmess.messui;
 import com.missmess.messui.utils.TUtil;
 
 /**
- * Builder to build a set of configurations. Use {@link #enable()} to enable build.
+ * Builder to build a set of configurations. Use {@link #enable()} to enable it and create settings.
+ * A {@link IParam param} will be created after build, the param will later be applied by using
+ * {@link LayoutDelegate}.
  */
 abstract class IBuilder<SETTING extends ISetting, PARAM extends IParam> {
     SETTING s;
