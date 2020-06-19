@@ -134,6 +134,14 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
         }
 
         /**
+         * Navigation button text-color.
+         */
+        public S2 navigateTextColor(int color) {
+            p.navigateTextColor = color;
+            return (S2) this;
+        }
+
+        /**
          * Navigation click event.
          */
         public S2 navigateClick(Runnable click) {
@@ -193,6 +201,7 @@ public abstract class TitleBuilder<S1 extends TitleBuilder.Setting> extends IBui
         public boolean hideNavigate;
         public int navigateIcon;
         public String navigateText;
+        public Integer navigateTextColor;
         public String addiBtnText;
         public View.OnClickListener addiBtnClicker;
         public boolean overlay;

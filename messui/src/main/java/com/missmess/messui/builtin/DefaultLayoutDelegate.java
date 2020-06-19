@@ -86,6 +86,8 @@ public class DefaultLayoutDelegate extends LayoutDelegate<DefaultLayoutFactory, 
                 tv.setNavigateIcon(p.navigateIcon);
             if (p.navigateText != null)
                 tv.setNavigateText(p.navigateText);
+            if (p.navigateTextColor != null)
+                tv.setNavigateTextColor(p.navigateTextColor);
             if (p.navigateClicker != null)
                 tv.setNavigateClickListener(new View.OnClickListener() {
                     @Override

@@ -41,7 +41,10 @@ public class MainActivity extends CoreActivity<TitleBuilderRaw, LoadViewBuilderR
 
     @Override
     public void buildLayout(BuilderKit<TitleBuilderRaw, LoadViewBuilderRaw, RefreshBuilderRaw, SystemUIBuilderRaw> kit) {
-        kit.tb.enable().title("您好啊，开发者").hideNavigate().bgColor(Color.WHITE).titleColor(Color.BLACK);
+        kit.tb.enable().title("您好啊，开发者").bgColor(Color.GRAY)
+                .navigateText("饭回")
+                .navigateTextColor(Color.GREEN)
+                .titleColor(Color.BLACK);
         kit.lb.enable().loadingTip("😊 稍等一下哦");
         kit.rb.enable().enableRefresh(new Runnable() {
             @Override

@@ -208,6 +208,10 @@ public class TitleView extends FrameLayout {
         navigate_btn.setCompoundDrawablesWithIntrinsicBounds(icon, 0, 0, 0);
     }
 
+    public void setNavigateTextColor(int color) {
+        navigate_btn.setTextColor(color);
+    }
+
     public void setNavigateApperance(int apperance) {
         if (apperance != -1) {
             navigate_btn.setTextAppearance(getContext(), apperance);
